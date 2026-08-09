@@ -648,6 +648,84 @@ export function MarcoNormativo({ partes }) {
                 </div>
               )}
 
+              {s.verbos && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Verbos de alta precision</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {s.verbos.map((v, i) => (
+                      <div key={i} className="bg-emerald-50 border-l-4 border-emerald-500 p-2 rounded">
+                        <div className="font-mono font-bold text-emerald-900">{v.verbo}</div>
+                        <div className="text-xs text-gray-700">{v.uso}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {s.latinismos && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Latinismos de uso forense</div>
+                  <table className="w-full text-xs border border-gray-200 rounded overflow-hidden">
+                    <thead className="bg-slate-700 text-white">
+                      <tr>
+                        <th className="text-left p-2 font-semibold">Latinismo</th>
+                        <th className="text-left p-2 font-semibold">Significado y uso</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {s.latinismos.map((l, i) => (
+                        <tr key={i} className="border-t border-gray-100 hover:bg-gray-50">
+                          <td className="p-2 font-mono font-bold text-violet-700 italic">{l.termino}</td>
+                          <td className="p-2 text-gray-700">{l.significado}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {s.frases && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Frases listas para usar</div>
+                  <ul className="space-y-2">
+                    {s.frases.map((f, i) => (
+                      <li key={i} className="bg-amber-50 border-l-4 border-amber-500 p-2 rounded text-sm text-gray-800 italic">
+                        "{f}"
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {s.nota && (
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
+                  <span className="font-semibold text-amber-900">Nota: </span>
+                  <span className="text-amber-800">{s.nota}</span>
+                </div>
+              )}
+
+              {s.secciones && Array.isArray(s.secciones) && s.secciones[0]?.items && (
+                <div className="space-y-3 my-4">
+                  {s.secciones.map((sec, i) => (
+                    <div key={i} className="border border-gray-200 rounded p-3 bg-white">
+                      <div className="font-semibold text-sm text-gray-900 mb-2">{sec.nombre}</div>
+                      {sec.items && (
+                        <ul className="space-y-1">
+                          {sec.items.map((it, j) => (
+                            <li key={j} className="text-sm text-gray-700 flex items-start gap-2">
+                              <span className="text-emerald-600 font-bold">✓</span> <span>{it}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {sec.plantilla && (
+                        <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-slate-50 border border-slate-200 p-3 rounded mt-2">{sec.plantilla}</pre>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {s.enConstruccion && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
                   <span className="font-semibold text-amber-900">🚧 En construccion: </span>

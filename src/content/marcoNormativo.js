@@ -1,4 +1,5 @@
 // Marco Normativo Mexicano - Datos estructurados
+// Partes II, III, IV, V, VI, VII y IX del Manual de Litigacion
 // Partes II, III, IV, V, VI y VII (parcial) del Manual de Litigacion
 
 export const PARTES = [
@@ -614,10 +615,152 @@ Cualquier controversia que se derive de la interpretacion, cumplimiento o incump
             definicion: "Prorroga expresa de competencia territorial.",
             ventaja: "Permite fijar Monterrey como sede, incluso para partes domiciliadas fuera del estado.",
             redaccion: `CLAUSULA DE JURISDICCION:
-Por este acto, las partes se someten expresamente a la jurisdiccion de los Juzgados de lo Civil del Estado de Nuevo Leon, en Monterrey, renunciando a cualquier otra competencia que por razon de domicilio, ubicacion de bienes o cualquier otra causa pudiera corresponderles. [CONTINUA]`,
-            enConstruccion: true
+Por este acto, las partes se someten expresamente a la jurisdiccion de los Juzgados de lo Civil del Estado de Nuevo Leon, en Monterrey, renunciando a cualquier otra competencia que por razon de domicilio, ubicacion de bienes o cualquier otra causa pudiera corresponderles.`,
+          },
+          {
+            nombre: "Clausula de Intereses Moratorios",
+            definicion: "En contratos civiles, pactar interes moratorio superior al legal.",
+            ventaja: "Genera rendimiento automatico en caso de mora.",
+            redaccion: `CLAUSULA DE INTERESES MORATORIOS:
+En caso de atraso en el pago de cualquier suma adeudada conforme a este contrato, se causaran intereses moratorios a razon de [porcentaje]% mensual sobre el saldo insoluto, sin perjuicio de los derechos del acreedor para reclamar los danios y perjuicios que se deriven del incumplimiento.
+
+NOTA: El porcentaje no puede ser usurario. La SCJN ha establecido criterios de usura que deben considerarse.`,
+            nota: "Restriccion: No puede ser usurario. La SCJN ha establecido criterios de usura que deben considerarse."
+          },
+          {
+            nombre: "Clausula de Reconocimiento de Adeudo",
+            definicion: "Cada mensualidad o parcialidad constituye titulo ejecutivo independiente.",
+            ventaja: "Simplifica la via procesal ejecutiva.",
+            redaccion: `CLAUSULA DE RECONOCIMIENTO DE ADEUDO:
+Por este acto, [deudor] reconoce tener a favor de [acreedor] la obligacion de pagar [cantidad] pesos en los terminos establecidos en este contrato. Cada pago vencido constituye auto de exequendo conforme al articulo 1391 del Codigo de Comercio.`
           }
         ]
+      },
+      {
+        id: "7-3",
+        titulo: "Estructura Obligatoria de Todo Contrato",
+        secciones: [
+          {
+            nombre: "Datos de Identificacion",
+            items: [
+              "Tipo de contrato (Venta, Arrendamiento, Servicios Profesionales, etc.)",
+              "Numero de contrato (para control interno del despacho)",
+              "Lugar y fecha de celebracion",
+              "Legislacion aplicable"
+            ]
+          },
+          {
+            nombre: "Comparecientes",
+            items: [
+              "Identificacion completa de cada parte",
+              "Capacidad juridica (persona fisica o moral)",
+              "Representacion (poder notarial, acta constitutiva)"
+            ]
+          },
+          {
+            nombre: "Declaraciones",
+            plantilla: `Dec. I: Que el [vendedor/arrendador/prestador] es legitimo titular del bien/derecho/servicio objeto del contrato.
+Dec. II: Que el [comprador/arrendatario/receptor] conoce el estado del bien/servicio y lo acepta en esas condiciones.
+Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
+          },
+          {
+            nombre: "Clausulas",
+            items: [
+              "Objeto (con descripcion tecnica precisa)",
+              "Precio y forma de pago",
+              "Plazo y entrega",
+              "Obligaciones del vendedor/arrendador/prestador",
+              "Obligaciones del comprador/arrendatario/receptor",
+              "Garantias",
+              "Causas de rescision",
+              "Clausula penal",
+              "Domicilios para notificaciones",
+              "Legislacion y jurisdiccion aplicable",
+              "Forma de resolucion de controversias"
+            ]
+          },
+          {
+            nombre: "Firmas",
+            items: [
+              "Lugar, fecha y firmas de ambas partes",
+              "Firmas de testigos (cuando aplique)",
+              "Firma y sello del Notario (cuando aplique)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "parte-ix",
+    titulo: "Vocabulario Juridico de Elite (Mexicano)",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "9-1",
+        titulo: "Verbos de Alta Precision para Escritos Mexicanos",
+        verbos: [
+          { verbo: "fractura", uso: "Incumplimiento grave de estandar juridico" },
+          { verbo: "quebranta", uso: "Violacion de norma imperativa" },
+          { verbo: "infringe", uso: "Incumplimiento de disposicion legal" },
+          { verbo: "transgrede", uso: "Violacion de garantia constitucional" },
+          { verbo: "vulnera", uso: "Lesion a derechos fundamentales" },
+          { verbo: "subsume", uso: "Encuadramiento de hechos en norma" },
+          { verbo: "acredita", uso: "Prueba de un hecho" },
+          { verbo: "evidencia", uso: "Demostracion ostensible de un hecho" },
+          { verbo: "constata", uso: "Verificacion de un hecho documentado" },
+          { verbo: "impone", uso: "Obligacion ineludible del juzgador" },
+          { verbo: "exige", uso: "Imperativo legal o jurisprudencial" },
+          { verbo: "deviene", uso: "Se convierte, llega a ser" },
+          { verbo: "dicta", uso: "Pronuncia una resolucion" },
+          { verbo: "establece", uso: "Fija criterio jurisprudencial" },
+          { verbo: "sostiene", uso: "Mantiene criterio de manera reiterada" }
+        ]
+      },
+      {
+        id: "9-2",
+        titulo: "Latinismos de Uso Forense Mexicano",
+        latinismos: [
+          { termino: "sub judice", significado: "Bajo conocimiento del juez; el asunto que se litiga" },
+          { termino: "a quo", significado: "El juez de primera instancia (en el recurso)" },
+          { termino: "ad quem", significado: "El tribunal de alzada (en el recurso)" },
+          { termino: "litis", significado: "La controversia planteada" },
+          { termino: "ex officio", significado: "De oficio, sin peticion de parte" },
+          { termino: "iter criminis", significado: "Camino del delito (materia penal)" },
+          { termino: "non bis in idem", significado: "No dos veces por lo mismo" },
+          { termino: "per se", significado: "Por si mismo; en si" },
+          { termino: "ultra petita", significado: "Mas alla de lo pedido (vicio de la sentencia)" },
+          { termino: "erga omnes", significado: "Con efectos frente a todos" },
+          { termino: "ex ante", significado: "Antes del hecho; a priori" },
+          { termino: "ex post", significado: "Despues del hecho; a posteriori" },
+          { termino: "sui generis", significado: "De su genero; unico en su clase" },
+          { termino: "pro bono", significado: "Por el bien publico" }
+        ],
+        enConstruccion: true
+      },
+      {
+        id: "9-3",
+        titulo: "Frases de Apertura para Fundamentos de Derecho",
+        frases: [
+          "Tal y como lo ha sostenido de manera reiterada el Pleno / la Primera Sala de la Suprema Corte de Justicia de la Nacion...",
+          "La jurisprudencia firme del Poder Judicial de la Federacion ha establecido con claridad meridiana que...",
+          "En perfecta congruencia con el criterio del Alto Tribunal...",
+          "El Tribunal Colegiado del Cuarto Circuito, en criterio que resulta aplicable al presente asunto, ha determinado que...",
+          "Resulta palmario que, en terminos del articulo [X] del [ordenamiento]...",
+          "Conforme a lo establecido en la jurisprudencia de rubro '[RUBRO]'...",
+          "A mayor abundamiento, la normativa aplicable prevista en el articulo [X] establece que...",
+          "De conformidad con los principios mas elementales del ordenamiento juridico mexicano..."
+        ]
+      },
+      {
+        id: "9-4",
+        titulo: "Frases de Cierre para Bloques de Subsuncion",
+        frases: [
+          "Por tanto, no cabe sino concluir que...",
+          "La subsuncion es inevitable: al concurrir [elementos], esta H. Autoridad debera...",
+          "De lo anterior se infiere, sin posibilidad de interpretacion [EN CONSTRUCCION]..."
+        ],
+        enConstruccion: true
       }
     ]
   }
