@@ -467,6 +467,130 @@ export function MarcoNormativo({ partes }) {
                   <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-slate-50 border border-slate-200 p-3 rounded">{s.plantilla}</pre>
                 </div>
               )}
+
+              {s.reglaOro && (
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
+                  <span className="font-semibold text-amber-900">Regla de oro: </span>
+                  <span className="text-amber-800">{s.reglaOro}</span>
+                </div>
+              )}
+
+              {s.plazo && (
+                <div className="bg-violet-50 border-l-4 border-violet-500 p-3 my-3 text-sm">
+                  <span className="font-semibold text-violet-900">Plazo: </span>
+                  <span className="text-violet-800">{s.plazo}</span>
+                </div>
+              )}
+
+              {s.fundamento && (
+                <div className="bg-slate-50 border-l-4 border-slate-700 p-3 my-3 text-sm">
+                  <span className="font-semibold text-slate-900">Fundamento: </span>
+                  <span className="text-slate-800">{s.fundamento}</span>
+                </div>
+              )}
+
+              {s.introduccion && (
+                <p className="text-sm text-gray-700 bg-blue-50 border-l-4 border-blue-400 p-3 my-3">{s.introduccion}</p>
+              )}
+
+              {s.requisitos && Array.isArray(s.requisitos) && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Requisitos</div>
+                  <ul className="space-y-1.5">
+                    {s.requisitos.map((r, i) => (
+                      <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✓</span> <span>{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {s.argumentoNulidad && (
+                <div className="bg-red-50 border-l-4 border-red-500 p-3 my-3">
+                  <div className="text-xs font-bold text-red-900 mb-1">ARGUMENTO ESTANDAR PARA IMPUGNAR EMPLAZAMIENTOS DEFICIENTES</div>
+                  <pre className="whitespace-pre-wrap font-mono text-xs text-red-900">{s.argumentoNulidad}</pre>
+                </div>
+              )}
+
+              {s.documentosEjecucion && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Documentos con Aparejada Ejecucion (art. 1391 C.Co.)</div>
+                  <ul className="space-y-1.5">
+                    {s.documentosEjecucion.map((d, i) => (
+                      <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                        <span className="text-blue-600 font-bold">•</span> <span>{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {s.estructura && (
+                <div className="space-y-3 my-4">
+                  {Object.entries(s.estructura).map(([k, v]) => (
+                    <div key={k} className="border border-gray-200 rounded p-3 bg-white">
+                      <div className="font-semibold text-xs text-gray-900 mb-2">{v.titulo}</div>
+                      {v.descripcion && <p className="text-xs text-gray-600 mb-2">{v.descripcion}</p>}
+                      <ul className="space-y-1">
+                        {v.items.map((it, i) => (
+                          <li key={i} className="text-xs text-gray-700">• {it}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.petitorio && (
+                <div className="my-4">
+                  <div className="text-xs font-bold text-gray-700 mb-1">PETITORIO EJEMPLAR</div>
+                  <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-slate-50 border border-slate-200 p-3 rounded">{s.petitorio}</pre>
+                </div>
+              )}
+
+              {s.tipos && Array.isArray(s.tipos) && s.tipos[0]?.procedeContra && (
+                <div className="space-y-4 my-4">
+                  {s.tipos.map((t, i) => (
+                    <div key={i} className="border-2 border-violet-200 rounded p-3 bg-violet-50/30">
+                      <div className="font-semibold text-sm text-violet-900 mb-2">{t.nombre}</div>
+                      <div className="mb-2">
+                        <div className="text-xs font-bold text-violet-700 uppercase mb-1">Procede contra</div>
+                        <ul className="space-y-1">
+                          {t.procedeContra.map((p, j) => (
+                            <li key={j} className="text-xs text-gray-700">• {p}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="bg-emerald-50 border-l-4 border-emerald-500 p-2 rounded">
+                        <div className="text-xs font-bold text-emerald-700 mb-1">Ventaja estrategica</div>
+                        <div className="text-xs text-emerald-800">{t.ventaja}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.seccionesExplicadas && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Secciones de la demanda</div>
+                  <div className="space-y-2">
+                    {s.seccionesExplicadas.map((sec, i) => (
+                      <div key={i} className="bg-gray-50 border-l-4 border-gray-400 p-2 rounded-r">
+                        <div className="font-medium text-sm"><b>{sec.num}.</b> {sec.nombre}</div>
+                        <div className="text-xs text-gray-600">{sec.detalle}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {s.enConstruccion && (
+                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
+                  <span className="font-semibold text-amber-900">🚧 En construccion: </span>
+                  <span className="text-amber-800">Esta seccion se completara con el resto del material del Manual.</span>
+                </div>
+              )}
             </section>
           ))
         )}

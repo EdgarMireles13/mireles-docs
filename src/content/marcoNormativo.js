@@ -1,5 +1,5 @@
 // Marco Normativo Mexicano - Datos estructurados
-// Partes II, III, IV y V (5.1) del Manual de Litigacion
+// Partes II, III, IV, V y VI (parcial) del Manual de Litigacion
 
 export const PARTES = [
   {
@@ -348,7 +348,179 @@ TERCERO.- [Legitimacion pasiva]
 CUARTO.- [Fundamentos sustantivos - aqui se aplica la subsuncion juridica completa]
 QUINTO.- [Jurisprudencia aplicable - con subsuncion]
 
-              P E T I T O R I O  (SUPLICO)`
+              P E T I T O R I O  (SUPLICO)
+
+Por lo anteriormente expuesto y fundado, a Usted
+C. Juez, con todo respeto pido y suplico:
+PRIMERO.- [solicitud precisa]
+SEGUNDO.- [solicitud precisa]
+[...]
+
+                  P R U E B A S
+
+Esta parte ofrece como medios de prueba:
+I. DOCUMENTAL PUBLICA: [especificar, referencias a Hechos]
+II. DOCUMENTAL PRIVADA: [especificar, referencias a Hechos]
+III. PERICIAL: [especificar materia, referencias a Hechos]
+IV. TESTIMONIAL: [especificar testigos, referencias a Hechos]
+V. CONFESIONAL: [contra demandado, referencias a Hechos]
+VI. INSPECCION JUDICIAL: [si aplica]
+VII. PRESUNCIONAL LEGAL Y HUMANA: [si aplica]
+VIII. INSTRUMENTAL DE ACTUACIONES: [certificaciones]
+
+                  A T E N T A M E N T E
+
+[FIRMA]
+[NOMBRE COMPLETO - LICENCIADO EN CIENCIAS JURIDICAS]
+CEDULA PROFESIONAL: [NUMERO]`
+      },
+      {
+        id: "5-1-3",
+        titulo: "Competencia Territorial en Nuevo Leon (arts. 14-32 CPCNL)",
+        descripcion: "La competencia se determina al momento de presentacion de la demanda y no se pierde por cambios posteriores.",
+        tabla: [
+          { materia: "Obligaciones personales", foro: "Domicilio del demandado" },
+          { materia: "Inmuebles", foro: "Lugar del inmueble" },
+          { materia: "Sucesiones", foro: "Ultimo domicilio del de cujus" },
+          { materia: "Alimentos", foro: "A eleccion del alimentista" },
+          { materia: "Arrendamiento", foro: "Lugar del inmueble" },
+          { materia: "Danios", foro: "Lugar donde se produjo el danio" },
+          { materia: "Contratos", foro: "Lugar pactado o domicilio del demandado" }
+        ],
+        reglaOro: "La competencia se determina al momento de presentacion de la demanda y no se pierde por cambios posteriores."
+      },
+      {
+        id: "5-1-4",
+        titulo: "El Emplazamiento y sus Consecuencias",
+        introduccion: "El emplazamiento es el acto procesal mas importante del procedimiento civil. Un emplazamiento deficiente puede anular todo lo actuado.",
+        requisitos: [
+          "Entrega personal de la cedula de notificacion en el domicilio del demandado",
+          "Entrega de copia de la demanda y documentos anexos",
+          "Apercibimiento expreso del plazo para contestar",
+          "Constancia de actuario con lugar, hora y fecha"
+        ],
+        argumentoNulidad: `"El emplazamiento practicado en autos adolece de nulidad procesal absoluta, toda vez que el actuario no dio cumplimiento al imperativo legal contenido en el articulo [X] del CPCNL, que exige [requisito omitido]. Esta omision priva a mi representado del derecho fundamental de audiencia consagrado en el articulo 14 de la Constitucion Politica de los Estados Unidos Mexicanos, cuya violacion es impugnable en cualquier estado del proceso."`
+      },
+      {
+        id: "5-2",
+        titulo: "El Juicio Ejecutivo Mercantil ante Juzgados de Nuevo Leon",
+        descripcion: "Para creditos documentados en titulos de credito (pagare, letra de cambio, cheque), el juicio ejecutivo mercantil ofrece ventajas procesales significativas al acreedor.",
+        fundamento: "Arts. 1391-1414 del Codigo de Comercio",
+        documentosEjecucion: [
+          "Sentencias ejecutoriadas",
+          "Escrituras publicas",
+          "Titulos de credito (pagares, letras, cheques)",
+          "Polizas de seguros",
+          "Documentos privados reconocidos judicialmente"
+        ],
+        estructura: {
+          hechoPrimero: {
+            titulo: "CREDITO Y SU DOCUMENTACION",
+            descripcion: "Describir el titulo ejecutivo con precision:",
+            items: ["Tipo de documento", "Fecha de suscripcion", "Monto", "Vencimiento", "Partes intervinientes"]
+          },
+          hechoSegundo: {
+            titulo: "INCUMPLIMIENTO",
+            items: ["Fecha de vencimiento", "Presentacion al cobro (en su caso)", "Negativa de pago", "Protesto (si aplica)"]
+          },
+          hechoTercero: {
+            titulo: "SALDO INSOLUTO Y ACCESORIOS",
+            items: ["Suerte principal", "Intereses ordinarios", "Intereses moratorios", "Demas accesorios pactados"]
+          }
+        },
+        petitorio: `PRIMERO.- Tener por interpuesta la presente demanda en JUICIO EJECUTIVO MERCANTIL.
+SEGUNDO.- Ordenar el auto de exequendo, despachando ejecucion para que se embarguen bienes del demandado suficientes para cubrir [monto] por concepto de suerte principal, mas los intereses que se sigan generando hasta el pago total.
+TERCERO.- Una vez ejecutado el embargo, emplazar al demandado para que oponga excepciones dentro del termino legal.
+CUARTO.- En su momento, dictar sentencia de remate condenando al demandado al pago de las prestaciones reclamadas y al pago de gastos y costas del juicio.`
+      },
+      {
+        id: "5-3-1",
+        titulo: "Recurso de Apelacion (arts. 381-430 CPCNL)",
+        plazo: "Nueve dias habiles a partir de la notificacion de la resolucion impugnada (verificar reforma mas reciente del CPCNL).",
+        plantilla: `A G R A V I O S
+
+PRIMERO.- La resolucion impugnada viola en mi perjuicio los articulos [X] del CPCNL / [Y] del CCNL, en virtud de que [describir la violacion con precision, indicando por que esta equivocado, que debio haber resuelto y por que].
+
+SEGUNDO.- Adicionalmente, el a quo incurrio en [describir otra violacion]. [Cada agravio debe ser autosuficiente: debe poder leerse de forma independiente y contener toda la argumentacion necesaria para que la Sala lo evalue sin necesidad de remitirse a los demas.]`,
+        reglaOro: "El agravio que no ataca de forma directa y especifica la motivacion del juez es inoperante. La Sala unicamente puede examinar lo que el apelante le plantea; lo que no se plantea, no se resuelve."
+      }
+    ]
+  },
+  {
+    id: "parte-vi",
+    titulo: "El Juicio de Amparo: Herramienta Estrategica",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "6-1",
+        titulo: "Tipos de Amparo y su Aplicacion Estrategica",
+        descripcion: "El juicio de amparo es la herramienta procesal mas poderosa del sistema juridico mexicano. Su uso estrategico diferencia al litigante de elite del promedio.",
+        tipos: [
+          {
+            nombre: "Amparo Indirecto (ante Juzgado de Distrito - art. 107 CPEUM y art. 10 LA)",
+            procedeContra: [
+              "Actos de autoridad que NO son sentencias definitivas",
+              "Leyes (amparo contra normas)",
+              "Actos de autoridades fuera de juicio",
+              "Actos en juicio que afectan derechos sustantivos (personalidad, embargo, etc.)",
+              "Actos de ejecucion imposible de reparar en sentencia definitiva"
+            ],
+            ventaja: "Detiene el acto impugnado mediante medidas cautelares (suspension provisional y definitiva)."
+          },
+          {
+            nombre: "Amparo Directo (ante Tribunal Colegiado - art. 170 LA)",
+            procedeContra: [
+              "Sentencias definitivas",
+              "Laudos de tribunales de trabajo",
+              "Resoluciones que ponen fin al juicio"
+            ],
+            ventaja: "Ultima instancia para revocar o modificar sentencia desfavorable en primera instancia."
+          }
+        ]
+      },
+      {
+        id: "6-2",
+        titulo: "Estructura de la Demanda de Amparo Indirecto",
+        plantilla: `C. JUEZ DE DISTRITO EN MATERIAS CIVILES Y DE TRABAJO
+EN EL ESTADO DE NUEVO LEON
+P  R  E  S  E  N  T  E
+
+[NOMBRE], Licenciado en Ciencias Juridicas, Cedula Profesional [NUMERO], en representacion de [QUEJOSO], segun poder que adjunto, ante Usted respetuosamente comparezco y expongo:
+
+Con fundamento en los articulos 103 y 107 de la Constitucion Politica de los Estados Unidos Mexicanos, y los articulos 107, 108 y demas relativos de la Ley de Amparo, vengo a promover JUICIO DE AMPARO INDIRECTO, con base en los siguientes datos:
+
+I. NOMBRE Y DOMICILIO DEL QUEJOSO:
+[Nombre completo y domicilio para notificaciones]
+
+II. NOMBRE Y DOMICILIO DEL TERCERO INTERESADO:
+[Parte contraria en el juicio de origen]
+
+III. AUTORIDADES RESPONSABLES:
+a) ORDENADORA: C. Juez [N°] Civil del [Distrito] Judicial en el Estado de Nuevo Leon, con sede en [ciudad].
+b) EJECUTORA: C. Actuario adscrito al mismo juzgado.
+
+IV. ACTO RECLAMADO:
+[Describir con precision el acto: auto, resolucion, decreto, incluyendo fecha y expediente de origen]
+
+V. PRECEPTOS CONSTITUCIONALES VIOLADOS:
+Articulos 14, 16 [y los que apliquen] de la CPEUM.
+
+VI. CONCEPTOS DE VIOLACION:
+PRIMERO.- [Violacion al derecho...]
+SEGUNDO.- [Violacion al derecho...]
+
+VII. SUSPENSION DEL ACTO RECLAMADO:
+[Solicitar suspension provisional y definitiva, con fundamento en arts. 128-147 LA, senialando el perjuicio... CONTINUA]`,
+        seccionesExplicadas: [
+          { num: "I", nombre: "Nombre y domicilio del quejoso", detalle: "Nombre completo y domicilio para notificaciones" },
+          { num: "II", nombre: "Tercero interesado", detalle: "Parte contraria en el juicio de origen" },
+          { num: "III", nombre: "Autoridades responsables", detalle: "Separar ordenadora y ejecutora" },
+          { num: "IV", nombre: "Acto reclamado", detalle: "Descripcion precisa con fecha y expediente" },
+          { num: "V", nombre: "Preceptos violados", detalle: "Art. 14, 16 CPEUM y los que apliquen" },
+          { num: "VI", nombre: "Conceptos de violacion", detalle: "Numerados (PRIMERO, SEGUNDO, ...)" },
+          { num: "VII", nombre: "Suspension", detalle: "Arts. 128-147 LA; provisional y definitiva" }
+        ],
+        enConstruccion: true
       }
     ]
   }
