@@ -1,5 +1,5 @@
 // Marco Normativo Mexicano - Datos estructurados
-// Partes II, III, IV, V y VI (parcial) del Manual de Litigacion
+// Partes II, III, IV, V, VI y VII (parcial) del Manual de Litigacion
 
 export const PARTES = [
   {
@@ -510,17 +510,114 @@ PRIMERO.- [Violacion al derecho...]
 SEGUNDO.- [Violacion al derecho...]
 
 VII. SUSPENSION DEL ACTO RECLAMADO:
-[Solicitar suspension provisional y definitiva, con fundamento en arts. 128-147 LA, senialando el perjuicio... CONTINUA]`,
-        seccionesExplicadas: [
-          { num: "I", nombre: "Nombre y domicilio del quejoso", detalle: "Nombre completo y domicilio para notificaciones" },
-          { num: "II", nombre: "Tercero interesado", detalle: "Parte contraria en el juicio de origen" },
-          { num: "III", nombre: "Autoridades responsables", detalle: "Separar ordenadora y ejecutora" },
-          { num: "IV", nombre: "Acto reclamado", detalle: "Descripcion precisa con fecha y expediente" },
-          { num: "V", nombre: "Preceptos violados", detalle: "Art. 14, 16 CPEUM y los que apliquen" },
-          { num: "VI", nombre: "Conceptos de violacion", detalle: "Numerados (PRIMERO, SEGUNDO, ...)" },
-          { num: "VII", nombre: "Suspension", detalle: "Arts. 128-147 LA; provisional y definitiva" }
-        ],
-        enConstruccion: true
+[Solicitar suspension provisional y definitiva, con fundamento en arts. 128-147 LA, senialando el perjuicio de dificil reparacion y el interes social que no se afecta]
+
+                  A T E N T A M E N T E
+
+[FIRMA Y DATOS DEL PROFESIONAL]`
+      },
+      {
+        id: "6-3",
+        titulo: "Los Conceptos de Violacion: Tecnica de Redaccion",
+        descripcion: "Los conceptos de violacion son el corazon del amparo. Su redaccion deficiente es la causa mas frecuente de sentencias desfavorables.",
+        estructuraConcepto: `[NOMBRE DEL DERECHO O GARANTIA VIOLADA]:
+La resolucion reclamada vulnera en perjuicio de mi representado el derecho [fundamental / garantia] de [nombre], consagrado en el articulo [X] Constitucional, en virtud de que:
+1. [Explicar que dice la Constitucion / Ley de Amparo / Tratado Internacional]
+2. [Explicar que hizo la autoridad responsable]
+3. [Demostrar la discrepancia entre ambas]
+4. [Senialar el criterio jurisprudencial que apoya la violacion]
+5. [Concluir con la consecuencia juridica: la nulidad / revocacion / modificacion del acto]`,
+        violaciones: [
+          {
+            articulo: "Articulo 14 CPEUM (Audiencia)",
+            ejemplo: `La autoridad dicto resolucion sin dar oportunidad al quejoso de ser oido en defensa propia.
+
+Conforme a la jurisprudencia reiterada del Pleno de la SCJN (Tesis P. XXXIV/2016 (10a.), Libro 25, mayo de 2016, Tomo I, pagina 451, Registro: 2010867), la violacion del derecho de audiencia es absoluta y no requiere proyeccion de danio alguno.
+
+En el caso sub judice, el auto impugnado de fecha [FECHA] no contiene constancia alguna de que la parte quejosa haya sido oida en defensa de sus derechos antes de dictarse.`
+          },
+          {
+            articulo: "Articulo 16 CPEUM (Legalidad y Fundamentacion)",
+            ejemplo: `La resolucion carece de fundamentacion y motivacion adecuadas. La autoridad no cito el precepto legal que le faculta para actuar ni explico las razones de hecho que la llevaron a resolver como lo hizo.
+
+La jurisprudencia del Pleno de la SCJN ha establecido que toda resolucion administrativa debe contener: (i) el precepto legal aplicable; (ii) los hechos que lo integran; y (iii) la interpretacion juridica que justifica la conclusion.
+
+En el caso sub judice, el auto impugnado carece de [deficiencia especifica], lo que genera incertidumbre sobre los fundamentos de la resolucion.`
+          },
+          {
+            articulo: "Articulo 17 CPEUM (Acceso a la Justicia)",
+            ejemplo: `La autoridad impuso requisitos no previstos en la ley para el ejercicio de la accion, obstaculizando el acceso a la justicia.`
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "parte-vii",
+    titulo: "Contratos: Principios de Redaccion",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "7-1",
+        titulo: "Jerarquia de Fuentes en Materia Contractual (Nuevo Leon)",
+        subsecciones: [
+          {
+            tipo: "Contratos Civiles en Nuevo Leon",
+            jerarquia: [
+              "1. Voluntad de las partes (autonomia de la voluntad - art. 1796 CCNL)",
+              "2. Codigo Civil para el Estado de Nuevo Leon",
+              "3. Codigo Civil Federal (supletorio)",
+              "4. Usos y costumbres del lugar",
+              "5. Principios generales del derecho"
+            ]
+          },
+          {
+            tipo: "Contratos Mercantiles",
+            jerarquia: [
+              "1. Codigo de Comercio (aplicable a toda la Republica)",
+              "2. LGTOC (si aplica)",
+              "3. CCF (suple C.Co.)"
+            ]
+          }
+        ]
+      },
+      {
+        id: "7-2",
+        titulo: "Clausulas de Blindaje Permitidas en Contratos Civiles (NL)",
+        descripcion: "Las clausulas mas importantes para la proteccion contractual en la practica neoleonesa.",
+        clausulas: [
+          {
+            nombre: "Clausula Penal (art. 1840 CCNL)",
+            definicion: "Indemnizacion pactada expresamente.",
+            ventajas: [
+              "No requiere acreditar danio real",
+              "Su sola existencia facilita la ejecucion",
+              "El juzgado unicamente puede moderarla si es notoriamente excesiva y el incumplimiento fue parcial"
+            ],
+            redaccion: `CLAUSULA PENAL:
+Las partes acuerdan que en caso de incumplimiento de cualquiera de las obligaciones estipuladas en este contrato, el incumplidor pagara al acreedor, a titulo de pena, una cantidad equivalente a [porcentaje]% del valor total del contrato, sin que esto impida al acreedor reclamar, ademas, el cumplimiento de la obligacion incumplida y los danios y perjuicios que deriven de tal incumplimiento.`
+          },
+          {
+            nombre: "Clausula Compromisoria / Arbitral",
+            definicion: "Sometimiento a arbitraje privado o al Centro de Mediacion y Arbitraje de la Camara de Comercio de Monterrey (CANACO).",
+            ventajas: [
+              "Evita los tiempos del Poder Judicial",
+              "Confidencialidad",
+              "Pericia en materia mercantil",
+              "Sentencia es ejecutable judicialmente"
+            ],
+            redaccion: `CLAUSULA ARBITRAL:
+Cualquier controversia que se derive de la interpretacion, cumplimiento o incumplimiento del presente contrato sera resuelta mediante arbitraje, de conformidad con las reglas del Centro de Mediacion y Arbitraje de la Camara de Comercio de Monterrey (CANACO), siendo designado un arbitro conforme a dichas reglas.`
+          },
+          {
+            nombre: "Clausula de Jurisdiccion",
+            definicion: "Prorroga expresa de competencia territorial.",
+            ventaja: "Permite fijar Monterrey como sede, incluso para partes domiciliadas fuera del estado.",
+            redaccion: `CLAUSULA DE JURISDICCION:
+Por este acto, las partes se someten expresamente a la jurisdiccion de los Juzgados de lo Civil del Estado de Nuevo Leon, en Monterrey, renunciando a cualquier otra competencia que por razon de domicilio, ubicacion de bienes o cualquier otra causa pudiera corresponderles. [CONTINUA]`,
+            enConstruccion: true
+          }
+        ]
       }
     ]
   }

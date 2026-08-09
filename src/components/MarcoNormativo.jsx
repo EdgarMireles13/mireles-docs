@@ -585,6 +585,69 @@ export function MarcoNormativo({ partes }) {
                 </div>
               )}
 
+              {s.estructuraConcepto && (
+                <div className="my-4">
+                  <div className="text-xs font-bold text-gray-700 mb-1">ESTRUCTURA DE CADA CONCEPTO DE VIOLACION</div>
+                  <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-slate-50 border border-slate-200 p-3 rounded">{s.estructuraConcepto}</pre>
+                </div>
+              )}
+
+              {s.violaciones && (
+                <div className="space-y-3 my-4">
+                  {s.violaciones.map((v, i) => (
+                    <div key={i} className="border-2 border-red-200 rounded p-3 bg-red-50/30">
+                      <div className="font-semibold text-sm text-red-900 mb-2">⚠️ {v.articulo}</div>
+                      <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-white p-2 rounded border border-gray-200">{v.ejemplo}</pre>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.subsecciones && (
+                <div className="space-y-4 my-4">
+                  {s.subsecciones.map((sub, i) => (
+                    <div key={i} className="border border-gray-200 rounded p-3 bg-white">
+                      <div className="font-semibold text-sm text-gray-900 mb-2">{sub.tipo}</div>
+                      <ol className="space-y-1">
+                        {sub.jerarquia.map((item, j) => (
+                          <li key={j} className="text-sm text-gray-700 bg-gray-50 px-2 py-1 rounded">{item}</li>
+                        ))}
+                      </ol>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.clausulas && (
+                <div className="space-y-4 my-4">
+                  {s.clausulas.map((c, i) => (
+                    <div key={i} className="border-2 border-indigo-200 rounded p-3 bg-indigo-50/20">
+                      <div className="font-semibold text-sm text-indigo-900 mb-1">{c.nombre}</div>
+                      <div className="text-xs text-gray-700 mb-2"><b>Que es:</b> {c.definicion}</div>
+                      {c.ventajas && (
+                        <div className="mb-2">
+                          <div className="text-xs font-bold text-emerald-700 mb-1">Ventajas</div>
+                          <ul className="space-y-0.5">
+                            {c.ventajas.map((v, j) => (
+                              <li key={j} className="text-xs text-gray-700 flex items-start gap-1">
+                                <span className="text-emerald-600">✓</span> {v}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {c.ventaja && (
+                        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-2 rounded mb-2 text-xs">
+                          <b>Ventaja:</b> {c.ventaja}
+                        </div>
+                      )}
+                      <div className="text-xs font-bold text-gray-700 mb-1">REDACCION</div>
+                      <pre className="whitespace-pre-wrap font-mono text-xs text-gray-800 bg-white border border-gray-200 p-2 rounded">{c.redaccion}</pre>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {s.enConstruccion && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
                   <span className="font-semibold text-amber-900">🚧 En construccion: </span>
