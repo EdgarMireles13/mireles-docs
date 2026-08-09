@@ -1,6 +1,13 @@
 # ⚖️ Generador de Documentos - Mireles González & Asociados
 
+[![CI](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/ci.yml)
+[![Deploy](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/deploy.yml)
+[![CodeQL](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/codeql.yml/badge.svg)](https://github.com/EdgarMireles13/mireles-docs/actions/workflows/codeql.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 Aplicación web para generar escritos jurídicos mexicanos (amparos, quejas, demandas laborales, etc.) con plantillas editables y persistencia local.
+
+🌐 **Demo en vivo:** https://edgarmireles13.github.io/mireles-docs/
 
 ## ✨ Características
 
@@ -10,7 +17,7 @@ Aplicación web para generar escritos jurídicos mexicanos (amparos, quejas, dem
 - Toasts y confirmaciones inline
 - Copiar al portapapeles y descargar `.txt`
 - Modo oscuro (próximamente)
-- Tests con Vitest (21+ tests)
+- Tests con Vitest (37 tests pasando)
 
 ## 🚀 Desarrollo
 
@@ -72,3 +79,7 @@ test/                          # Vitest
 ## 📜 Licencia
 
 MIT
+
+## 🏷️ Topics
+
+`react` · `vite` · `tailwindcss` · `legal` · `mexico` · `amparo` · `document-generator` · `vitest` · `javascript`
