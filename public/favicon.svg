@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#1e293b"/>
+  <!-- Columna central -->
+  <rect x="31" y="14" width="2" height="36" fill="#fbbf24"/>
+  <!-- Base -->
+  <rect x="22" y="50" width="20" height="3" rx="1" fill="#fbbf24"/>
+  <!-- Brazo horizontal -->
+  <rect x="14" y="18" width="36" height="2" rx="1" fill="#fbbf24"/>
+  <!-- Platillo izquierdo -->
+  <path d="M 8 28 L 24 28 L 20 36 Q 16 38 12 36 Z" fill="#fbbf24"/>
+  <!-- Platillo derecho -->
+  <path d="M 40 28 L 56 28 L 52 36 Q 48 38 44 36 Z" fill="#fbbf24"/>
+  <!-- Cadenas -->
+  <line x1="14" y1="18" x2="16" y2="28" stroke="#fbbf24" stroke-width="1"/>
+  <line x1="50" y1="18" x2="52" y2="28" stroke="#fbbf24" stroke-width="1"/>
+  <!-- Top knob -->
+  <circle cx="32" cy="13" r="3" fill="#fbbf24"/>
+</svg>
