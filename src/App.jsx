@@ -5,6 +5,8 @@ import { store, KEYS } from "./utils/store.js";
 import { fmtFecha, tipoL, estadoCls, estadoL, uid } from "./utils/helpers.js";
 import { ToastProvider, useToast, useConfirm } from "./components/Toast.jsx";
 import { BorradorList } from "./components/BorradorItem.jsx";
+import { MarcoNormativo } from "./components/MarcoNormativo.jsx";
+import { PARTES } from "./content/marcoNormativo.js";
 
 function Stepper({ step }) {
   const steps = ["Expediente", "Plantilla", "Datos", "Vista previa"];
@@ -36,7 +38,8 @@ function Tabs({ tab, setTab, activos, borradoresCount }) {
   const items = [
     { id: "expedientes", l: "📁 Expedientes", badge: activos || null },
     { id: "generador",   l: "✍️ Generar" },
-    { id: "borradores",  l: "📄 Borradores",  badge: borradoresCount || null },
+    { id: "marco",       l: "📚 Marco" },
+    { id: "borradores",  l: "📄 Borradores", badge: borradoresCount || null },
   ];
   return (
     <div className="bg-white border-b border-gray-200 px-5 flex">
@@ -604,6 +607,18 @@ function AppInner() {
                 }}
               />
             )}
+          </div>
+        )}
+
+        {tab === "marco" && (
+          <div>
+            <div className="mb-4">
+              <h2 className="font-semibold text-gray-800 text-lg">Marco Normativo Mexicano</h2>
+              <p className="text-xs text-gray-500 mt-1">
+                Jerarquia normativa, estructura del Poder Judicial, jurisprudencia y estructura de escritos procesales.
+              </p>
+            </div>
+            <MarcoNormativo partes={PARTES} />
           </div>
         )}
       </div>
