@@ -757,6 +757,76 @@ export function MarcoNormativo({ partes }) {
                 </div>
               )}
 
+              {s.pasos && (
+                <div className="space-y-3 my-4">
+                  {s.pasos.map((p, i) => (
+                    <div key={i} className="border-l-4 border-indigo-500 bg-indigo-50/30 p-3 rounded-r">
+                      <div className="font-bold text-xs text-indigo-900 mb-2">PASO {p.paso} - {p.nombre}</div>
+                      <ul className="space-y-1">
+                        {p.items.map((it, j) => (
+                          <li key={j} className="text-sm text-gray-700 flex items-start gap-2">
+                            <span className="text-indigo-600">▸</span> <span>{it}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {s.advertencia && (
+                <div className="bg-red-50 border-2 border-red-300 rounded-lg p-4 my-4">
+                  <div className="font-bold text-red-900 mb-2">⚠️ {s.advertencia.titulo}</div>
+                  <div className="text-sm text-red-800 mb-3">{s.advertencia.contenido}</div>
+                  <div className="text-xs font-bold text-red-700 mb-1">La IA puede cometer errores en:</div>
+                  <ul className="space-y-0.5 mb-3">
+                    {s.advertencia.erroresPosibles.map((e, i) => (
+                      <li key={i} className="text-xs text-red-700">• {e}</li>
+                    ))}
+                  </ul>
+                  <div className="bg-red-100 rounded p-2 text-xs text-red-900 font-medium">
+                    {s.advertencia.conclusion}
+                  </div>
+                </div>
+              )}
+
+              {s.reglaPractica && (
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-3 my-3 text-sm">
+                  <div className="font-bold text-blue-900 mb-1">REGLA PRÁCTICA</div>
+                  <div className="text-blue-800">{s.reglaPractica}</div>
+                </div>
+              )}
+
+              {s.validacionDatos && (
+                <div className="bg-emerald-50 border-l-4 border-emerald-500 p-3 my-3">
+                  <div className="font-bold text-sm text-emerald-900 mb-2">Validacion de datos</div>
+                  <ul className="space-y-0.5">
+                    {s.validacionDatos.map((v, i) => (
+                      <li key={i} className="text-sm text-emerald-800 flex items-start gap-2">
+                        <span className="text-emerald-600 font-bold">✓</span> <span>{v}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {s.subsecciones && Array.isArray(s.subsecciones) && (
+                <div className="space-y-3 my-4">
+                  {s.subsecciones.map((sub, i) => (
+                    <div key={i} className={`border rounded p-3 ${sub.enConstruccion ? "border-amber-200 bg-amber-50/30" : "border-gray-200 bg-white"}`}>
+                      <div className="font-semibold text-sm text-gray-900 mb-2">{sub.nombre}</div>
+                      <ul className="space-y-1">
+                        {sub.items.map((it, j) => (
+                          <li key={j} className="text-sm text-gray-700 flex items-start gap-2">
+                            <span className={sub.enConstruccion ? "text-amber-500" : "text-emerald-600"}>{sub.enConstruccion ? "○" : "☐"}</span> <span>{it}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {s.enConstruccion && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
                   <span className="font-semibold text-amber-900">🚧 En construccion: </span>

@@ -1,5 +1,5 @@
-// Marco Normativo Mexicano - Datos estructurados
-// Partes II, III, IV, V, VI, VII, IX y X del Manual de Litigacion
+
+// Partes II, III, IV, V, VI, VII, IX, X, XI y XII del Manual de Litigacion
 // Partes II, III, IV, V, VI y VII (parcial) del Manual de Litigacion
 
 export const PARTES = [
@@ -881,9 +881,69 @@ Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
           },
           {
             nombre: "Clausula LFPIORPI",
-            redaccion: `Conforme a la Ley Federal para la Prevencion e Identificacion de Operaciones con Recursos de Procedencia Ilicita (LFPIORPI), el Licenciado esta obligado a obtener informacion verificable sobre [CONTINUA]`,
-            enConstruccion: true
+            redaccion: `Conforme a la Ley Federal para la Prevencion e Identificacion de Operaciones con Recursos de Procedencia Ilicita (LFPIORPI), el Licenciado esta obligado a obtener informacion verificable sobre la identidad del cliente. El cliente acepta proporcionar toda la informacion y documentacion requerida, incluyendo identificacion oficial con fotografia, RFC y comprobante de domicilio.`
           }
+        ]
+      }
+    ]
+  },
+  {
+    id: "parte-xi",
+    titulo: "Integracion de Skills: Flujo de Trabajo Completo",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "11-1",
+        titulo: "Orden de Ejecucion Recomendado para Escritos",
+        pasos: [
+          { paso: 1, nombre: "Analisis del Caso", items: ["Leer todos los documentos del cliente", "Construir la MATRIZ DE HECHOS", "Identificar la accion procesal correcta", "Verificar plazos y prescripcion"] },
+          { paso: 2, nombre: "Investigacion Normativa y Jurisprudencial", items: ["Identificar normas del CCNL / CPCNL / C.Co. aplicables", "Buscar tesis en SJF (sjf2.scjn.gob.mx)", "Verificar vigencia y jerarquia de cada tesis", "Construir la MATRIZ HECHOS-DOCTRINA"] },
+          { paso: 3, nombre: "Redaccion del Escrito", items: ["Encabezamiento correcto (Parte III 3.3)", "Hechos: cronologicos, numerados, documentados", "Fundamentos: subsuncion completa por patron (Parte IV 4.4)", "Petitorio: preciso y congruente", "Pruebas: clasificadas y relacionadas con hechos"] },
+          { paso: 4, nombre: "Revision de Calidad", items: ["Checklist completo (Parte XII)", "Verificacion de citas del SJF", "Revision de estilo (Parte IX 9.5)", "Congruencia petitorio-hechos-fundamentos"] },
+          { paso: 5, nombre: "Generacion del Documento", items: ["Formato Word profesional", "Papel tamano carta (Mexico): 12240 x 15840 DXA", "Fuente: Times New Roman 12pt o Arial 12pt", "Margenes minimos 2.5 cm (practica NL)"] }
+        ]
+      },
+      {
+        id: "11-2",
+        titulo: "Advertencias sobre el Uso de IA en la Practica Juridica",
+        advertencia: {
+          titulo: "Responsabilidad del Profesional",
+          contenido: "La jurisprudencia citada en cualquier escrito generado con la asistencia de este manual debe ser verificada de forma independiente por el licenciado en ciencias juridicas antes de presentar el escrito ante cualquier organo jurisdiccional.",
+          erroresPosibles: ["Numeros de registro SJF", "Datos de publicacion", "Vigencia de tesis", "Interpretacion de jurisprudencia"],
+          conclusion: "El profesional es, en todo momento, el responsable tecnico y etico del contenido del escrito."
+        },
+        reglaPractica: "Antes de presentar cualquier escrito, verificar cada cita del SJF directamente en https://sjf2.scjn.gob.mx. Introduce el numero de registro o el rubro exacto.",
+        validacionDatos: ["Numero de registro correcto", "Tribunal emisor identificado con precision", "Epoca correcta", "Libro/Tomo/Pagina coinciden", "Rubro identico al citado"]
+      }
+    ]
+  },
+  {
+    id: "parte-xii",
+    titulo: "Checklist Maestro de Elite",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "12-1",
+        titulo: "Pre-Redaccion",
+        items: [
+          "¿Se construyo la Matriz de Hechos con fechas, documentos y numeros?",
+          "¿Se verifico la competencia del organo jurisdiccional?",
+          "¿Se verificaron los plazos procesales y de prescripcion?",
+          "¿Se identifico el tipo de procedimiento correcto?",
+          "¿Se localizaron las tesis jurisprudenciales aplicables en el SJF?",
+          "¿Se verifico la competencia territorial correcta?",
+          "¿Se identificaron todos los documentos acreditatorios disponibles?",
+          "¿Se realizo analisis de riesgo procesal preliminar?"
+        ]
+      },
+      {
+        id: "12-2",
+        titulo: "Durante la Redaccion",
+        subsecciones: [
+          { nombre: "Encabezamiento", items: ["¿El encabezamiento identifica correctamente al juzgado / tribunal?", "¿Se incluyo el numero del juzgado (si aplica)?", "¿Se identifico el distrito judicial (si aplica)?", "¿Se escribio P R E S E N T E con espacios?"] },
+          { nombre: "Hechos", items: ["¿Los Hechos estan numerados de forma secuencial?", "¿Cada Hecho tiene fecha precisa?", "¿Cada Hecho tiene lugar identificable?", "¿Cada Hecho cita el Documento que lo acredita?", "¿Los Hechos estan en orden cronologico?", "¿No hay argumentacion juridica en los Hechos (solo narrativa)?", "¿La narracion es precisa y evita generalizaciones?"] },
+          { nombre: "Fundamentos de Derecho", items: ["¿Cada Fundamento aplica el metodo DOCTRINA / HECHOS / CONCLUSION?", "¿Las citas del SJF incluyen: rubro, numero de tesis, epoca, libro/tomo, fecha, pagina, registro?", "¿Cada cita se conecta con al menos un Hecho numerado de la demanda?", "¿Se usan los conectores de subsuncion correctos (Parte IV 4.4)?", "¿Hay conclusion juridica tras cada bloque de subsuncion?", "¿No hay frases dubitativas?", "¿El tono es categorico en toda la extension?"] },
+          { nombre: "Petitorio", items: ["¿El petitorio es claro en una lectura rapida?", "¿Cada peticion es precisa y no ambigua?", "¿El petitorio es congruente con los Hechos y Fundamentos?", "[EN CONSTRUCCION]"], enConstruccion: true }
         ]
       }
     ]
