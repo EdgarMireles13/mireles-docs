@@ -726,6 +726,37 @@ export function MarcoNormativo({ partes }) {
                 </div>
               )}
 
+              {s.pares && (
+                <div className="my-4">
+                  <div className="font-semibold text-sm mb-2">Reglas de sustitucion</div>
+                  <div className="space-y-2">
+                    {s.pares.map((p, i) => (
+                      <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div className="bg-red-50 border-l-4 border-red-500 p-2 rounded">
+                          <div className="text-xs font-bold text-red-700 uppercase mb-1">❌ Prohibido</div>
+                          <div className="font-mono text-sm text-red-900">{p.prohibido}</div>
+                        </div>
+                        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-2 rounded">
+                          <div className="text-xs font-bold text-emerald-700 uppercase mb-1">✓ Sustituir por</div>
+                          <div className="font-mono text-sm text-emerald-900">{p.sustituto}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {s.leyes && Array.isArray(s.leyes) && (
+                <div className="space-y-3 my-4">
+                  {s.leyes.map((l, i) => (
+                    <div key={i} className="border border-gray-200 rounded p-3 bg-white">
+                      <div className="font-semibold text-sm text-gray-900">{l.nombre}</div>
+                      <div className="text-xs text-gray-600 mt-1">{l.detalle}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {s.enConstruccion && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
                   <span className="font-semibold text-amber-900">🚧 En construccion: </span>

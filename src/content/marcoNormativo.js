@@ -1,5 +1,5 @@
 // Marco Normativo Mexicano - Datos estructurados
-// Partes II, III, IV, V, VI, VII y IX del Manual de Litigacion
+// Partes II, III, IV, V, VI, VII, IX y X del Manual de Litigacion
 // Partes II, III, IV, V, VI y VII (parcial) del Manual de Litigacion
 
 export const PARTES = [
@@ -758,9 +758,133 @@ Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
         frases: [
           "Por tanto, no cabe sino concluir que...",
           "La subsuncion es inevitable: al concurrir [elementos], esta H. Autoridad debera...",
-          "De lo anterior se infiere, sin posibilidad de interpretacion [EN CONSTRUCCION]..."
-        ],
-        enConstruccion: true
+          "De lo anterior se infiere, sin posibilidad de interpretacion contraria, que...",
+          "En consecuencia, y atendiendo al principio de legalidad que rige la actuacion de las autoridades jurisdiccionales, el H. Juzgado debera declarar...",
+          "El analisis conjunto de los hechos probados y de los criterios jurisprudenciales citados conduce, de forma ineluctable, a la conclusion de que...",
+          "No es posible llegar a otra conclusion que la de que...",
+          "Resulta evidente que [conclusion]...",
+          "Advierto que la subsuncion propuesta es la unica compatible con [norma/jurisprudencia]..."
+        ]
+      },
+      {
+        id: "9-5",
+        titulo: "Expresiones PROHIBIDAS y Sus Sustitutos",
+        descripcion: "Tabla esencial para la revision final de todo escrito juridico.",
+        pares: [
+          { prohibido: '"creo que / me parece"', sustituto: '"Resulta palmario que" / "Conforme a..."' },
+          { prohibido: '"dicho" (pronombre)', sustituto: '"tal" / "el referido" / "el antes mencionado"' },
+          { prohibido: '"el mismo / la misma"', sustituto: "Repetir sustantivo o usar 'aquel'" },
+          { prohibido: '"proceder a"', sustituto: '"proceder" / "realizar" / "ejecutar"' },
+          { prohibido: '"en aras de"', sustituto: '"en beneficio de" / "en favor de"' },
+          { prohibido: '"toda vez que"', sustituto: '"en virtud de que" / "dado que" / "puesto que"' },
+          { prohibido: '"quizas / tal vez"', sustituto: "Eliminar en Fundamentos; usar en analisis adversario" },
+          { prohibido: '"podria" (en propia tesis)', sustituto: "Suprimir o usar afirmacion categorica" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "parte-x",
+    titulo: "Hoja de Encargo Profesional (Nuevo Leon)",
+    enConstruccion: true,
+    secciones: [
+      {
+        id: "10-1",
+        titulo: "Marco Legal de la Relacion Abogado-Cliente en Mexico",
+        leyes: [
+          { nombre: "Codigo Civil para el Estado de Nuevo Leon", detalle: "Contrato de prestacion de servicios profesionales (arts. 2545-2581 CCNL)" },
+          { nombre: "Ley Reglamentaria del Articulo 5° Constitucional", detalle: "Relativa al ejercicio de las profesiones en el Distrito Federal (supletoria en estados)" },
+          { nombre: "Estatuto y Codigo de Etica del Colegio de Abogados de Monterrey / Barra Mexicana", detalle: "Codigo deontologico profesional (BMA)" },
+          { nombre: "Ley Federal para la Prevencion e Identificacion de Operaciones con Recursos de Procedencia Ilicita (LFPIORPI)", detalle: "Obliga al abogado a identificar al cliente en asuntos de riesgo" }
+        ]
+      },
+      {
+        id: "10-2",
+        titulo: "Estructura de la Hoja de Encargo (Adaptada a Mexico)",
+        secciones: [
+          {
+            num: 1,
+            nombre: "Datos del Profesional",
+            items: ["Nombre completo", "Cedula profesional federal", "Institucion que la expidio", "Membresia en Colegio de Abogados (numero)", "Domicilio del despacho", "Correo electronico y telefono"]
+          },
+          {
+            num: 2,
+            nombre: "Datos del Cliente",
+            items: ["Nombre completo / razon social", "RFC con homoclave", "CURP (personas fisicas)", "Domicilio fiscal / contractual", "Identificacion oficial (numero y tipo)"]
+          },
+          {
+            num: 3,
+            nombre: "Objeto del Encargo",
+            items: ["Descripcion precisa del asunto", "Alcance del servicio (que se incluye y que NO)", "Instancias cubiertas (primera instancia, recurso, amparo)"]
+          },
+          {
+            num: 4,
+            nombre: "Honorarios",
+            items: ["Tipo: fijo / por hora / por resultado / mixto", "Monto en moneda nacional (pesos mexicanos)", "Condicion de IVA (16% sobre honorarios)", "Calendario de pagos"]
+          },
+          {
+            num: 5,
+            nombre: "Gastos Procesales",
+            items: ["Distincion clara entre honorarios y gastos", "Fondo de gastos inicial (si se requiere)", "Desglose de gastos previsibles (peritajes, notificaciones, copias)"]
+          },
+          {
+            num: 6,
+            nombre: "Advertencias Obligatorias",
+            items: [
+              "El resultado del proceso depende de factores ajenos al profesional",
+              "Existe posibilidad de condena en costas para el cliente",
+              "La obligacion del profesional es de MEDIOS, no de RESULTADO",
+              "Sujecion a la LFPIORPI y obligacion de identificar al cliente"
+            ]
+          },
+          {
+            num: 7,
+            nombre: "Proteccion de Datos Personales",
+            items: [
+              "Conforme a la Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares (LFPDPPP)",
+              "Aviso de privacidad simplificado integrado o por referencia"
+            ]
+          },
+          {
+            num: 8,
+            nombre: "Confidencialidad",
+            items: ["Deber de secreto profesional", "Excepciones legales"]
+          },
+          {
+            num: 9,
+            nombre: "Terminacion del Encargo",
+            items: ["Causas de terminacion unilateral por el cliente", "Causas de renuncia del profesional", "Liquidacion de honorarios devengados"]
+          },
+          {
+            num: 10,
+            nombre: "Jurisdiccion y Ley Aplicable",
+            items: ["Leyes del Estado de Nuevo Leon", "Competencia: Tribunales de Nuevo Leon", "Idioma: espanol"]
+          },
+          {
+            num: 11,
+            nombre: "Firmas",
+            items: ["Lugar y fecha", "Firma autografa del profesional", "Firma autografa del cliente", "Huella digital del cliente (recomendable)"]
+          }
+        ]
+      },
+      {
+        id: "10-3",
+        titulo: "Redaccion de Clausulas Clave",
+        clausulas: [
+          {
+            nombre: "Clausula de Obligacion de Medios",
+            redaccion: `El Licenciado se compromete a actuar conforme a los mas altos estandares eticos y de diligencia profesional en la defensa de los derechos del cliente. Sin embargo, la ley mexicana impone que la obligacion del profesional es de MEDIOS y no de RESULTADO. Por tanto, el Licenciado no garantiza el resultado del juicio, el cual depende de factores ajenos a su control, incluyendo las decisiones de los organos jurisdiccionales.`
+          },
+          {
+            nombre: "Clausula de Condena en Costas",
+            redaccion: `El cliente reconoce que, conforme a las normas procesales aplicables, existe la posibilidad de que el organo jurisdiccional condene al cliente al pago de gastos y costas procesales en favor de la parte contraria. El Licenciado asesorara al cliente sobre estos riesgos, pero la decision final corresponde al cliente.`
+          },
+          {
+            nombre: "Clausula LFPIORPI",
+            redaccion: `Conforme a la Ley Federal para la Prevencion e Identificacion de Operaciones con Recursos de Procedencia Ilicita (LFPIORPI), el Licenciado esta obligado a obtener informacion verificable sobre [CONTINUA]`,
+            enConstruccion: true
+          }
+        ]
       }
     ]
   }
