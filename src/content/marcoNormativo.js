@@ -943,7 +943,51 @@ Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
           { nombre: "Encabezamiento", items: ["¿El encabezamiento identifica correctamente al juzgado / tribunal?", "¿Se incluyo el numero del juzgado (si aplica)?", "¿Se identifico el distrito judicial (si aplica)?", "¿Se escribio P R E S E N T E con espacios?"] },
           { nombre: "Hechos", items: ["¿Los Hechos estan numerados de forma secuencial?", "¿Cada Hecho tiene fecha precisa?", "¿Cada Hecho tiene lugar identificable?", "¿Cada Hecho cita el Documento que lo acredita?", "¿Los Hechos estan en orden cronologico?", "¿No hay argumentacion juridica en los Hechos (solo narrativa)?", "¿La narracion es precisa y evita generalizaciones?"] },
           { nombre: "Fundamentos de Derecho", items: ["¿Cada Fundamento aplica el metodo DOCTRINA / HECHOS / CONCLUSION?", "¿Las citas del SJF incluyen: rubro, numero de tesis, epoca, libro/tomo, fecha, pagina, registro?", "¿Cada cita se conecta con al menos un Hecho numerado de la demanda?", "¿Se usan los conectores de subsuncion correctos (Parte IV 4.4)?", "¿Hay conclusion juridica tras cada bloque de subsuncion?", "¿No hay frases dubitativas?", "¿El tono es categorico en toda la extension?"] },
-          { nombre: "Petitorio", items: ["¿El petitorio es claro en una lectura rapida?", "¿Cada peticion es precisa y no ambigua?", "¿El petitorio es congruente con los Hechos y Fundamentos?", "[EN CONSTRUCCION]"], enConstruccion: true }
+          { nombre: "Petitorio", items: ["¿El petitorio es claro en una lectura rapida?", "¿Cada peticion es precisa y no ambigua?", "¿El petitorio es congruente con los Hechos y Fundamentos?", "¿No hay peticiones ultra petita (mas alla de lo pedido)?", "¿Las cuantias estan correctamente calculadas?"] },
+          { nombre: "Pruebas", items: ["¿El ofrecimiento de pruebas clasifica correctamente cada medio probatorio?", "¿Cada prueba esta relacionada con el (los) Hecho(s) que acredita?", "¿Se utilizan los numeros de Hechos en el ofrecimiento de pruebas?", "¿Las pruebas documentales citan los expedientes o referencias correctas?", "¿Las pruebas periciales especifican la materia correctamente?", "¿Las pruebas testimoniales identifican a los testigos (nombre, domicilio)?"] }
+        ]
+      },
+      {
+        id: "12-3",
+        titulo: "Post-Redaccion",
+        subsecciones: [
+          { nombre: "Estilo y Lenguaje", items: ["¿Se eliminaron todos los arcaismos?", "¿Se eliminaron las expresiones prohibidas (Parte IX 9.5)?", "pregunta dicho pronombre", "pregunta mismo misma", "pregunta proceder a", "pregunta toda vez que", "¿El vocabulario es de elite forense mexicana (Parte IX 9.1, 9.2)?", "¿Las frases de apertura y cierre son de impacto (Parte IX 9.3, 9.4)?"] },
+          { nombre: "Verificacion Juridica", items: ["¿Se verificaron TODAS las tesis citadas en sjf2.scjn.gob.mx?", "¿Los numeros de registro SJF son exactos?", "¿Los datos de publicacion coinciden?", "¿Las tesis estan vigentes?", "¿La jerarquia es correcta (Parte IV 4.1)?"] },
+          { nombre: "Congruencia", items: ["Sin contradiccion Hechos-Fundamentos", "Sin contradiccion entre Fundamentos", "Petitorio coherente con Hechos+Fundamentos", "Numeros de Hechos citados existen", "Numeros de Documentos coinciden"] },
+          { nombre: "Formato y Presentacion", items: ["Formato carta con margenes", "Times New Roman 12pt o Arial 12pt", "Margenes minimo 2.5 cm", "TODOS los documentos adjuntos", "Firma y cedula correctas", "Fecha correcta", "Logo del despacho"] },
+          { nombre: "Ultima Revision", items: ["Coherencia logica", "Legible sin adjuntos", "Sin errores ortograficos", "Abreviaturas consistentes", "Numeracion consistente"] }
+        ]
+      },
+      {
+        id: "12-4",
+        titulo: "Checklist Especifico por Tipo de Escrito",
+        subsecciones: [
+          { nombre: "Para Demandas Civiles", items: ["Demandado tiene domicilio conocido", "Primer domicilio para notificaciones correcto", "Dentro de plazos de prescripcion", "Competencia territorial correcta (Parte V 5.1.3)"] },
+          { nombre: "Para Amparos Indirectos", items: ["Autoridades identificadas (Ordenadora+Ejecutora)", "Cada Concepto autosuficiente", "Suspension provisional y definitiva", "Perjuicio dificil reparacion acreditado"] },
+          { nombre: "Para Amparos Directos", items: ["Sentencia combatida identificada", "Agravios atacan motivacion directamente", "Sin agravios genericos"] },
+          { nombre: "Para Recursos de Apelacion", items: ["Resolucion impugnada identificada", "Cada Agravio autonomo", "Sin agravios que reiteren lo favorable"] }
+        ]
+      },
+      {
+        id: "12-5",
+        titulo: "Fin del Manual ARCHITECT-LITIGATOR-PRO MX-NL v1.0",
+        esFinal: true,
+        resumenEjecutivo: {
+          titulo: "Resumen Ejecutivo",
+          componentes: ["12 PARTES de instruccion completa", "3 PILARES de redaccion de elite", "4 PATRONES de subsuncion jurisprudencial", "10+ plantillas de escritos procesales", "CHECKLISTS maestros", "NORMATIVA aplicable a Nuevo Leon y PJF", "JURISPRUDENCIA del Pleno y Salas de la SCJN"],
+          verificacion: "Toda cita jurisprudencial DEBE validarse en https://sjf2.scjn.gob.mx",
+          responsabilidad: "El profesional firmante es el unico responsable del contenido.",
+          metadata: [
+            { campo: "Ultima actualizacion", valor: "24 de junio de 2026" },
+            { campo: "Version", valor: "1.0" },
+            { campo: "Autor", valor: "Edgar Jair Mireles Gonzalez" },
+            { campo: "Jurisdiccion", valor: "Mexico / Nuevo Leon / Cuarto Circuito" }
+          ]
+        }
+      }
+    ]
+  }
+];
         ]
       }
     ]

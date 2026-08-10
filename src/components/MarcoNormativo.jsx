@@ -827,6 +827,132 @@ export function MarcoNormativo({ partes }) {
                 </div>
               )}
 
+              {s.esFinal && s.resumenEjecutivo && (
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-lg p-6 my-4 shadow-xl" data-testid="fin-manual">
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-2">⚖️</div>
+                    <h4 className="text-2xl font-bold">{s.resumenEjecutivo.titulo}</h4>
+                    <div className="text-xs text-slate-400 mt-1">{s.titulo}</div>
+                  </div>
+
+                  <div className="bg-slate-700/50 rounded-lg p-4 mb-4">
+                    <div className="text-xs font-bold text-amber-400 uppercase mb-2">Componentes del Manual</div>
+                    <ul className="space-y-1.5">
+                      {s.resumenEjecutivo.componentes.map((c, i) => (
+                        <li key={i} className="text-sm text-slate-200 flex items-start gap-2">
+                          <span className="text-amber-400">▸</span> <span>{c}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-amber-500/20 border border-amber-400/40 rounded p-3 mb-3">
+                    <div className="text-xs font-bold text-amber-300 uppercase mb-1">⚠️ Verificacion Obligatoria</div>
+                    <div className="text-sm text-amber-100">{s.resumenEjecutivo.verificacion}</div>
+                  </div>
+
+                  <div className="bg-red-500/20 border border-red-400/40 rounded p-3 mb-4">
+                    <div className="text-xs font-bold text-red-300 uppercase mb-1">⚠️ Responsabilidad</div>
+                    <div className="text-sm text-red-100">{s.resumenEjecutivo.responsabilidad}</div>
+                  </div>
+
+                  <div className="border-t border-slate-600 pt-3 mt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {s.resumenEjecutivo.metadata.map((m, i) => (
+                        <div key={i} className="text-xs">
+                          <span className="text-slate-400">{m.campo}: </span>
+                          <span className="text-slate-100 font-mono">{m.valor}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {s.resumenEjecutivo && (
+                <div className="my-4 bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-lg p-6">
+                  <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">{s.resumenEjecutivo.titulo}</div>
+                  <div className="text-2xl font-bold mb-4">{s.titulo}</div>
+                  <ul className="space-y-2 mb-5">
+                    {s.resumenEjecutivo.componentes.map((c, i) => (
+                      <li key={i} className="text-sm flex items-start gap-2">
+                        <span className="text-amber-400">✓</span> <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="space-y-3 border-t border-slate-600 pt-4">
+                    <div>
+                      <div className="text-xs font-bold text-amber-400 uppercase">Verificacion</div>
+                      <div className="text-sm">{s.resumenEjecutivo.verificacion}</div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-amber-400 uppercase">Responsabilidad</div>
+                      <div className="text-sm">{s.resumenEjecutivo.responsabilidad}</div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+                      <div>
+                        <div className="text-xs text-slate-400">Version</div>
+                        <div className="text-sm font-semibold">{s.resumenEjecutivo.version}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Autor</div>
+                        <div className="text-sm font-semibold">{s.resumenEjecutivo.autor}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Fecha</div>
+                        <div className="text-sm font-semibold">{s.resumenEjecutivo.fecha}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Jurisdiccion</div>
+                        <div className="text-sm font-semibold">{s.resumenEjecutivo.jurisdiccion}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {s.resumen && (
+                <div className="my-4 bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-lg p-6">
+                  <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">{s.resumen.titulo}</div>
+                  <div className="text-2xl font-bold mb-4">{s.titulo}</div>
+                  <ul className="space-y-2 mb-5">
+                    {s.resumen.contenido.map((c, i) => (
+                      <li key={i} className="text-sm flex items-start gap-2">
+                        <span className="text-amber-400">✓</span> <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="space-y-3 border-t border-slate-600 pt-4">
+                    <div>
+                      <div className="text-xs font-bold text-amber-400 uppercase">Verificacion</div>
+                      <div className="text-sm">{s.resumen.verificacion}</div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-amber-400 uppercase">Responsabilidad</div>
+                      <div className="text-sm">{s.resumen.responsabilidad}</div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+                      <div>
+                        <div className="text-xs text-slate-400">Version</div>
+                        <div className="text-sm font-semibold">{s.resumen.version}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Autor</div>
+                        <div className="text-sm font-semibold">{s.resumen.autor}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Actualizado</div>
+                        <div className="text-sm font-semibold">{s.resumen.ultimaActualizacion}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-400">Jurisdiccion</div>
+                        <div className="text-sm font-semibold">{s.resumen.jurisdiccion}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {s.enConstruccion && (
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-3 my-3 text-sm">
                   <span className="font-semibold text-amber-900">🚧 En construccion: </span>
