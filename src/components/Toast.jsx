@@ -1,4 +1,5 @@
-import { useState, useEffect, createContext, useContext, useCallback } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { useState, createContext, useContext, useCallback } from "react";
 
 const ToastContext = createContext(null);
 

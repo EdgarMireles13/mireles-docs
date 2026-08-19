@@ -30,4 +30,5 @@ export const store = {
 export const KEYS = {
   EXPEDIENTES: "exp_mgz",
   BORRADORES: "bor_mgz",
+  EVALUACIONES: "eval_mgz",
 };
