@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import { TIPOS, ESTADOS, PLANTILLAS, FIELD_CFG, BLANK_EXP } from "./config/index.js";
 import { generateDoc } from "./generators/index.js";
 import { store, KEYS } from "./utils/store.js";
-import { fmtFecha, tipoL, estadoCls, estadoL, uid } from "./utils/helpers.js";
+import { tipoL, estadoCls, estadoL, uid } from "./utils/helpers.js";
 import { ToastProvider, useToast, useConfirm } from "./components/Toast.jsx";
 import { BorradorList } from "./components/BorradorItem.jsx";
 import { MarcoNormativo } from "./components/MarcoNormativo.jsx";
+import { GestorLegal } from "./components/GestorLegal.jsx";
 import { PARTES } from "./content/marcoNormativo.js";
 
 function Stepper({ step }) {
@@ -38,6 +39,7 @@ function Tabs({ tab, setTab, activos, borradoresCount }) {
   const items = [
     { id: "expedientes", l: "📁 Expedientes", badge: activos || null },
     { id: "generador",   l: "✍️ Generar" },
+    { id: "gestion",     l: "⚙️ Gestion" },
     { id: "marco",       l: "📚 Marco" },
     { id: "borradores",  l: "📄 Borradores", badge: borradoresCount || null },
   ];
@@ -193,6 +195,27 @@ function AppInner() {
     setDocTxt("");
     setBorNom("");
     setSaveOk(false);
+  };
+
+  const usarEnDemanda = (hechos, exp) => {
+    const fmtDia = (iso) => {
+      if (!iso) return "";
+      const [y, m, d] = iso.split("-");
+      return `${d}/${m}/${y}`;
+    };
+    setSelExp(exp || { numero: "S/N", tipo: "laboral" });
+    setSelPl("laboral");
+    setFields({
+      actor: exp?.quejoso || "",
+      demandado: exp?.autoridad || "",
+      salario_diario: hechos.salarioDiario || "",
+      fecha_ingreso: fmtDia(hechos.fechaIngreso),
+      fecha_despido: fmtDia(hechos.fechaSalida),
+    });
+    setDocTxt("");
+    setSaveOk(false);
+    setGStep(3);
+    setTab("generador");
   };
 
   const handleGenerate = () => {
@@ -608,6 +631,10 @@ function AppInner() {
               />
             )}
           </div>
+        )}
+
+        {tab === "gestion" && (
+          <GestorLegal expedientes={expedientes} onUsarEnDemanda={usarEnDemanda} />
         )}
 
         {tab === "marco" && (

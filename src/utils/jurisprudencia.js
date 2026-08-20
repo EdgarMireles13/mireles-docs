@@ -1,7 +1,7 @@
 // Helpers para formatear citas de jurisprudencia mexicana
 // Formato oficial segun Parte IV 4.2
 
-export function formatearCita({ tipo, numero, epoca, sala, organo, fuente, libro, mes, anio, tomo, materia, pagina, registro, rubro }) {
+export function formatearCita({ tipo, numero, epoca, sala, fuente, libro, mes, anio, tomo, materia, pagina, registro }) {
   const tipoStr = tipo === "jurisprudencia" ? "Jurisprudencia" : tipo === "tesis" ? "Tesis aislada" : "Criterio";
   const salaStr = sala || "";
   const epocaStr = epoca ? ` (${epoca})` : "";

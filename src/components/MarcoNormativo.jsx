@@ -73,7 +73,7 @@ export function MarcoNormativo({ partes }) {
         {seccionesFiltradas.length === 0 ? (
           <div className="text-center text-gray-400 py-12">
             <div className="text-3xl mb-2">🔍</div>
-            <div className="text-sm">Sin resultados para "{busqueda}"</div>
+            <div className="text-sm">Sin resultados para &quot;{busqueda}&quot;</div>
           </div>
         ) : (
           seccionesFiltradas.map((s) => (
@@ -416,7 +416,7 @@ export function MarcoNormativo({ partes }) {
                     <tbody>
                       {s.conectores.map((c, i) => (
                         <tr key={i} className="border-t border-gray-100">
-                          <td className="p-2 font-mono text-blue-700">"{c.texto}"</td>
+                          <td className="p-2 font-mono text-blue-700">&quot;{c.texto}&quot;</td>
                           <td className="p-2 text-gray-700">{c.uso}</td>
                         </tr>
                       ))}
@@ -690,7 +690,7 @@ export function MarcoNormativo({ partes }) {
                   <ul className="space-y-2">
                     {s.frases.map((f, i) => (
                       <li key={i} className="bg-amber-50 border-l-4 border-amber-500 p-2 rounded text-sm text-gray-800 italic">
-                        "{f}"
+                        &quot;{f}&quot;
                       </li>
                     ))}
                   </ul>

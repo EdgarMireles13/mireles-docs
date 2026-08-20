@@ -988,11 +988,6 @@ Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
     ]
   }
 ];
-        ]
-      }
-    ]
-  }
-];
 
 export const CONECTORES_SUBSUNCION = [
   { texto: "En el caso sub judice...", uso: "Aplicacion directa al caso" },

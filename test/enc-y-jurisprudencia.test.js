@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { enc, fmtFecha, uid, firma } from "../src/utils/helpers";
+import { enc } from "../src/utils/helpers";
 import { formatearCita, validarCita, SALAS, EPOCAS } from "../src/utils/jurisprudencia";
 
 describe("enc() - encabezados oficiales (Parte III 3.3)", () => {
