@@ -1,6 +1,5 @@
 
-// Partes II, III, IV, V, VI, VII, IX, X, XI y XII del Manual de Litigacion
-// Partes II, III, IV, V, VI y VII (parcial) del Manual de Litigacion
+// Partes II a XII del Manual de Litigacion (excepto la Parte I)
 
 export const PARTES = [
   {
@@ -688,6 +687,75 @@ Dec. III: Que ambas partes actuan sin coaccion ni dolo.`
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    id: "parte-viii",
+    titulo: "Subsuncion Juridica: Flujo de Trabajo Completo",
+    secciones: [
+      {
+        id: "8-1",
+        titulo: "Proceso de Redaccion en Cuatro Fases",
+        resumen: "Flujo operativo para pasar de los documentos del caso a fundamentos juridicos verificables.",
+        pasos: [
+          {
+            paso: 1,
+            nombre: "Inventario factico",
+            formula: "Construir la matriz de hechos: numero, fecha, descripcion precisa y documento que acredita cada hecho."
+          },
+          {
+            paso: 2,
+            nombre: "Identificacion normativa",
+            formula: "Para cada hecho, identificar la norma del CCNL, CPCNL o Codigo de Comercio que lo regula, la tesis del SJF que la interpreta y la consecuencia juridica."
+          },
+          {
+            paso: 3,
+            nombre: "Construccion de la subsuncion",
+            formula: "DOCTRINA -> HECHOS -> CONCLUSION. Explicar la regla, vincularla con hechos numerados y cerrar con la consecuencia juridica solicitada."
+          },
+          {
+            paso: 4,
+            nombre: "Revision de calidad",
+            formula: "Verificar registro SJF, conexion con hechos, competencia, legitimacion, congruencia del petitorio, pruebas relacionadas y tono categorico."
+          }
+        ]
+      },
+      {
+        id: "8-2",
+        titulo: "Patrones de Subsuncion para Nuevo Leon",
+        resumen: "Selecciona el patron segun el problema juridico que deba demostrarse.",
+        ejemplos: [
+          {
+            titulo: "Patron A — Desglose de elementos constitutivos",
+            descripcion: "Usar cuando la jurisprudencia define los elementos de una accion. Citar cada elemento, acreditar cada uno con fecha, documento y numero de hecho, y concluir que la concurrencia obliga a declarar la consecuencia pedida."
+          },
+          {
+            titulo: "Patron B — Confrontacion del estandar incumplido",
+            descripcion: "Usar cuando la contraparte infringe un estandar de conducta. Contrastar la conducta exigida por la norma con la conducta realizada u omitida, vinculando cada punto con sus hechos y documentos."
+          },
+          {
+            titulo: "Patron C — Proyeccion temporal",
+            descripcion: "Usar en prescripcion, caducidad o incumplimiento temporal. Identificar el inicio del computo, los eventos intermedios y la fecha de accion para concluir si el plazo se excedio o sigue vigente."
+          },
+          {
+            titulo: "Patron D — Control de convencionalidad",
+            descripcion: "Usar cuando una norma o acto afecta derechos humanos. Invocar el articulo 1 CPEUM, el tratado aplicable y la interpretacion de la Corte IDH para solicitar la interpretacion mas favorable o la inaplicacion."
+          }
+        ]
+      },
+      {
+        id: "8-3",
+        titulo: "Conectores y Cierre de la Subsuncion",
+        resumen: "Conectores que hacen visible el razonamiento entre la regla, los hechos probados y la conclusion.",
+        conectores: [
+          { texto: "En el caso sub judice", uso: "Introduce la aplicacion de la regla a los hechos concretos." },
+          { texto: "Respecto del elemento", uso: "Acredita de forma separada cada requisito de la accion." },
+          { texto: "Por tanto", uso: "Presenta la consecuencia que se sigue del razonamiento." },
+          { texto: "En consecuencia", uso: "Conecta el incumplimiento probado con la peticion procesal." },
+          { texto: "No admite justificacion", uso: "Cierra la confrontacion de un estandar incumplido con tono categorico." }
+        ],
+        formula: "DOCTRINA: [regla y cita completa del SJF].\nHECHOS: [hechos numerados y documentos que los acreditan].\nCONCLUSION: [consecuencia juridica y peticion congruente]."
       }
     ]
   },
