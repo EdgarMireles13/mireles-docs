@@ -1,5 +1,4 @@
 name: Dependabot
-
 on:
   push:
     branches: [main]
@@ -13,3 +12,23 @@ jobs:
         with:
           node-version: "20"
       - run: npm ci
+      
+- name: DPy Action
+  # You may pin to the exact commit or the version.
+  # uses: DesigniteTools/DPyAction@14d09a9ae6096688e56d336ae2d0a851a6e18d5f
+  uses: DesigniteTools/DPyAction@v1.3.1
+  with:
+    # Personal access token
+    PAT: # optional, default is No PAT provided
+    # Designite license key - optional
+    D_KEY: # optional, default is No key
+    # Operating System of the runner to choose the appropriate DPy binary
+    OS: # optional, default is linux
+    # Branch to analyze - optional
+    BRANCH: # optional, default is main
+    # Output format - optional
+    FORMAT: # optional, default is csv
+    # DCode API key for authentication
+    API_KEY: # optional
+    # DCode project ID
+    PROJECT_ID: # optional
